@@ -72,11 +72,9 @@ export class WeatherapiService {
             })
     }
 
-    getCityForecastByCityName(city: City) {
+    getCityForecastByCityName(city: City): Observable<CityForecast | null> {
         // api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}
-
-        console.log('call to getCityForecastByCityName')
-
+        // console.log('call to getCityForecastByCityName')
         const url = `${this.apiRootPath}/data/2.5/forecast?q=${city.description}&appid=${this.apiKey}&unit=metric`
 
         return this.http.get<CityForecast>(url).pipe(
@@ -89,17 +87,18 @@ export class WeatherapiService {
         )
     }
 
-    getCityForecastByCoordinates(lat: number, lon: number): Observable<CityForecast> {
+    getCityForecastByCoordinates(lat: number, lon: number): Observable<CityForecast | null> {
+        // console.log('call to getCityForecastByCoordinates')
+
         lat = parseFloat(lat.toFixed(4))
         lon = parseFloat(lon.toFixed(4))
-
         const url = `${this.apiRootPath}/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${this.apiKey}&unit=metric`
-        console.log('call to getCityForecastByCoordinates')
+
         return this.http.get<CityForecast>(url).pipe(
             retry(3),
             catchError((error: HttpErrorResponse) => {
                 console.error('Not able to load forecast for city id : ' + this.selectedCityId$.value)
-                return []
+                return of(null)
             })
         )
     }

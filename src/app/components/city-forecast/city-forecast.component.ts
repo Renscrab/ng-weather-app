@@ -26,6 +26,7 @@ export class CityForecastComponent implements OnInit {
         )
     }
     updateChart(forecastData: CityForecast) {
+        if (forecastData.list == null) { return }
         //
         const dateData: string[] = []
         const tempData: any[] = []
