@@ -1,0 +1,46 @@
+.forecast {
+    position: absolute;
+    top: 100px;
+    left: 10px;
+
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 30%) 0px 1px 4px -1px;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    direction: ltr;
+    font-style: normal;
+    font-variant-caps: normal;
+    font-weight: 400;
+    font-stretch: normal;
+    font-size: 18px;
+    padding: 5px 15px;
+    font-family: Roboto, Arial, sans-serif;
+    line-height: 30px;
+    color: black;
+    width: auto;
+    height: auto;
+    min-width: 75vw;
+    max-width: 95vw;
+}
+
+
+@media (max-width: 550px) {
+    :host {
+        top: unset;
+        bottom: 0px;
+        left: 10px;
+    }
+}
+
+
+.city-detail{
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
+    text-align: left;
+    font-size: 14px;
+    line-height: 15px;
+    padding: 0;
+    margin: 0;
+}

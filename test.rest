@@ -1,0 +1,21 @@
+
+// @baseUrl = http://93.93.42.137/api
+@baseUrl = http://test:MfiTestReact2021$@93.93.42.137/api
+###
+# @name login
+GET {{baseUrl}}/token HTTP/1.1
+Content-Type: application/json
+Authorization: Basic test:MfiTestReact2021$
+
+###
+# @name getCities
+GET {{baseUrl}}/cities?domain=nepal HTTP/1.1
+Content-Type: application/json
+
+// Authorization: Basic test:MfiTestReact2021$
+
+###
+# @name getCity
+GET {{baseUrl}}/forecast?area_id=4956 HTTP/1.1
+Content-Type: application/json
+Authorization: Basic test:MfiTestReact2021$

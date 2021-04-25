@@ -1,0 +1,12 @@
+<div *ngIf="forecastData$ | async as forecastData" class="forecast">
+  <div><button (click)="onClose($event)">Close</button></div>
+  <div class="city-detail">
+    <div>
+        City: {{ forecastData?.city?.name }}, {{ forecastData?.city?.country }}
+      </div>
+    <div>population: {{ forecastData?.city?.population }}</div>
+    <div>timezone: {{ forecastData?.city?.timezone }}</div>
+    <div>coord: {{ forecastData?.city?.coord | json }}</div>
+  </div>
+  <div [chart]="chart"></div>
+</div>
