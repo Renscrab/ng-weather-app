@@ -67,16 +67,16 @@ in HttpRequest
 
 `headers.set('Authorization', authData)`
 
-I only had full CORS error.
+I only had CORS and Preflight error.
 
-Tried with some rest client however , and it worked, with basic Auth.
+Tried with some rest client however , and it worked (with basic Auth).
 
 So, to be able to create something I saved the result of http://93.93.42.137/api/cities?domain=nepal in a local json (nepal_cities.json) 
 and used another weather API (openweather)
 
 ## JS framework = Angular 11
 
-I wish I could have done it with ReactJS, that's was my objective at first but I dont know ReactJs enough to dev this app fast enough
+I wish I could have done it with ReactJS, it was my objective at first but I dont know ReactJs enough to dev this app fast enough
 
 ## Google Map
 
@@ -85,10 +85,12 @@ GoogleMap is used without an api key => dev mode
 ## Getting Forecast with different City Name
 
 The name and the coordinates of the cities are from the provided API, but forecast data comes from openweather.
-So if openweather can't fin the name of the city after 4 try, the local service fallback to a search by coordinates (approximate).
+
+So if openweather can't find the name of the city after 4 tries, the local service fallback to a search by coordinates (approximate).
 
 That's why some city pin display forecast for another city
-example: clic on Jhapa display Bhadrapur (south-east pin)
+
+example: a clic on Jhapa display Bhadrapur (south-east pin)
 
 
 # NgWeatherApp
