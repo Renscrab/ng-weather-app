@@ -1,21 +1,25 @@
 [![Build](https://github.com/Renscrab/ng-weather-app/actions/workflows/build.yml/badge.svg)](https://github.com/Renscrab/ng-weather-app/actions/workflows/build.yml)
 
 
-#TEST
+# TEST
 
 The context of this test is to provide a simple application to display city weather forecast of Nepal.
 API provided but fake data or any open source data can be used instead (in that case, any country is allowed).
 
-Using React (preferred) or any Javascript framework of your choice,  implement the following features:
+Using React (preferred) or any Javascript framework of your choice,  implement the following features
+
 => done with Angular 11
 
 - Display cities locations for on a map 
+
 => done
 
 - On click on a city pin, display the next 3 days temperature (t) and humidity (hu) forcast on a chart (library of your choice, highcharts recommended). 
+
 => done
 
 - Deploy all this stack using docker and docker-compose
+
 => done
  
 
@@ -26,16 +30,24 @@ Using React (preferred) or any Javascript framework of your choice,  implement t
 	- swagger documentation :  : http://93.93.42.137/media/swagger-ui/index.html
 
 - [Optional] Make it responsive for mobile device.
+
 => Not done (partially)
 
 - [Optional] Also display weather icon on the chart using parameter "ww". Code correlation can be founed in"substitutes" section on endpoint http://93.93.42.137/api/forecastconfig.
+
 => Done (with openweather API)
 
 
 The source code should be delivered using github with detailed explanations on how to deploy and launch the project.
+
 => Done
 
-#NOTE
+Added CI Pipeline with Github Actions
+
+=> Done
+
+
+# NOTE
 
 ## Problem to connect with the API
 
