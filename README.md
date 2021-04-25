@@ -1,3 +1,5 @@
+[![Build](https://github.com/Renscrab/ng-weather-app/actions/workflows/build.yml/badge.svg)](https://github.com/Renscrab/ng-weather-app/actions/workflows/build.yml)
+
 #TEST
 
 The context of this test is to provide a simple application to display city weather forecast of Nepal.
